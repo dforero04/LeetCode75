@@ -1,4 +1,4 @@
-const mergeStringsAlternately = require("../mergeStringsAlternately.js");
+const mergeStringsAlternately = require("../1768_merge_strings_alternately");
 
 it("should merge two equal length strings", () => {
   expect(mergeStringsAlternately("abc", "xyz")).toBe("axbycz");
