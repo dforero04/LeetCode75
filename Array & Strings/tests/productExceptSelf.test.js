@@ -14,5 +14,10 @@ it.each([
     [192, 96, 64, 48],
   ],
 ])("for input %s, should return %s result", (nums, result) => {
-  expect(productExceptSelf(nums)).toEqual(result);
+  const answer = productExceptSelf(nums);
+  // Altering answer to help with +0 and -0
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i] === -0) answer[i] = 0;
+  }
+  expect(answer).toEqual(result);
 });

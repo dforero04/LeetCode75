@@ -22,7 +22,7 @@ function canPlaceFlowers(flowerbed, n) {
       if (n === 0) return true;
     }
   }
-  return n === 0;
+  return n <= 0;
 }
 
 /*
