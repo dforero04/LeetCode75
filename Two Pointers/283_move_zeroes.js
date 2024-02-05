@@ -17,4 +17,14 @@ function moveZeroes(nums) {
   return nums;
 }
 
+/*
+Completed by myself.
+Algorithm:
+- Initialize variable to keep track of where non-zero values should be placed
+- Traverse array and when you find a non-zero value, put it at nextSpaceToFill abd increment nextSpaceToFill
+-- We don't care where 0's are located because we will just fill the array with zeros at the end
+- Traverse array again starting at where nextSpaceToFill left off and fill rest of array with 0's
+- Return array
+*/
+
 module.exports = moveZeroes;
