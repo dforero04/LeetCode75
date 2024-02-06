@@ -33,6 +33,8 @@ Algorithm:
 -- If vowel set has the new next character, then increment count since we are adding it to the current substring.
 -- If the new count is greater than max, set max to count.
 - Return max
+
+Only optimization I read about was to return max early if max === k
 */
 
 module.exports = maxVowels;
