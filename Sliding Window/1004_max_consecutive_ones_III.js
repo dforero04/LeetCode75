@@ -15,7 +15,7 @@ function maxOnes(nums, k) {
       left++;
     }
     right++;
-    console.log(nums.slice(left, right), "Right is: ", right);
+    // console.log(nums.slice(left, right), "Right is: ", right);
   }
 
   return right - left;
