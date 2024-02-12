@@ -43,7 +43,13 @@ function maxOnes(nums, k) {
 /*
 Completed with help. My initial algorithm was close, but I couldn't figure out how to move the left side of the window.
 
-Need more documentation for successful algorithm.
+Algorithm:
+- Initialize 2 pointers, left and right.
+- Grow and shrink window based on k < 0. 
+-- Remember that the window is being adjusted right at every index.
+-- Left begins to move once k < 0, because we need to start shrinking the window since there are too many 0's flipped.
+-- Increment k whenever k < 0 and left holds a 0 so that we can get closer to 0 to add more into the window.
+- Return right minus left to give the length of subarray (window)
 */
 
 module.exports = maxOnes;
