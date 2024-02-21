@@ -20,14 +20,17 @@ module.exports = class TreeNode {
       if (i < nums.length) {
         // Create a TreeNode with the value at nums[i]
         // and add that value to the queue
-        curr.left = new TreeNode(nums[i++]);
-        q.push(curr.left);
+        curr.left = nums[i] === null ? null : new TreeNode(nums[i]);
+        // No need to add a null value to the queue
+        if (nums[i++] !== null) q.push(curr.left);
       }
       if (i < nums.length) {
         // Create a TreeNode with the value at nums[i]
         // and add that value to the queue
-        curr.right = new TreeNode(nums[i++]);
-        q.push(curr.right);
+        curr.right = nums[i] === null ? null : new TreeNode(nums[i]);
+
+        // No need to add a null value to the queue
+        if (nums[i++] !== null) q.push(curr.right);
       }
     }
     return root;
